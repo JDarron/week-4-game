@@ -20,10 +20,10 @@ $(document).ready(function() {
 // FUNCTION GENMAGICNUMBER
 function genMagicNumber() {
 	// ASSIGN MAGIC NUMBER A RANDOMLY SELECTED NUMBER FROM 19-120
-	magicNumber = Math.floor((Math.random() * 101) + 19);
+	magicNumber = Math.floor((Math.random() * 99) + 1);
 		// .TEXT MAGIC NUMBER
 		$("#magic-number").text(magicNumber);
-};
+};// END GENMAGICNUMBER
 
 // FUNCTION SETWINLOSS
 function setWinLoss() {
@@ -31,7 +31,7 @@ function setWinLoss() {
 	$("#wins").text(wins);
 	// .TEXT LOSSES
 	$("#losses").text(losses);	
-};
+};// END SETWINLOSS
 
 // FUNCTION RESETSCORE
 function resetScore() {
@@ -39,7 +39,7 @@ function resetScore() {
 	score = 0;
 		// .TEXT SCORE
 		$("#score").text(score); 
-};
+};// END RESETSCORE
 
 // FUNCTION GENJEWELVALUE
 function genJewelValue() {
@@ -50,23 +50,23 @@ function genJewelValue() {
 	jewelFour = Math.floor((Math.random() * 6) + 1);
 		// CHECK VARIABLES
 		console.log(jewelOne, jewelTwo, jewelThree, jewelFour);
-};
+};// END GENJEWELVALUE
 
 // FUNCTION WIN
 function win() {
 	// ALERT YOU WON
 	alert("You've Won!");
-	// ADD 1 TO WINS
-	wins++;
-		// .TEXT WINS++
-		$("#wins").text(wins);
-			// CALL GENMAGICNUMBER
-			genMagicNumber();
-				// CALL RESETSCORE
-				resetScore();
-					// CALL GENJEWELVALUE
-					genJewelValue();
-};
+		// ADD 1 TO WINS
+		wins++;
+			// .TEXT WINS++
+			$("#wins").text(wins);
+				// CALL GENMAGICNUMBER
+				genMagicNumber();
+					// CALL RESETSCORE
+					resetScore();
+						// CALL GENJEWELVALUE
+						genJewelValue();
+};// END WIN FUNCTION
 
 // FUNCTION LOSS
 function loss() {
@@ -82,7 +82,7 @@ function loss() {
 					resetScore();
 						// CALL GENJEWELVALUE
 						genJewelValue();
-};
+};// END LOSS FUNCTION
 
 
 // CALL RESETSCORE
