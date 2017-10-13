@@ -20,7 +20,7 @@ $(document).ready(function() {
     // FUNCTION GENMAGICNUMBER
     function genMagicNumber() {
         // ASSIGN MAGIC NUMBER A RANDOMLY SELECTED NUMBER FROM 19-120
-        magicNumber = Math.floor((Math.random() * 99) + 1);
+        magicNumber = Math.floor((Math.random() * 70) + 30);
         // .TEXT MAGIC NUMBER
         $("#magic-number").text(magicNumber);
     }; // END GENMAGICNUMBER
