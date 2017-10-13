@@ -95,22 +95,7 @@ $(document).ready(function() {
     genJewelValue();
 
     // ======================== ONCLICKS ===========================
-    // ONCLICK JEWEL1
-    $(".jewel").on("click", function() {
-        // SCORE += JEWELONE
-        score += this;
-        // SCORE .TEXT SCORE 
-        $("#score").text(score);
-        // IF SCORE IS === MAGICNUMBER
-        if (score === magicNumber) {
-            // CALL WIN FUNCTION
-            win();
-            // ELSE IF SCORE > MAGICNUMBER
-        } else if (score > magicNumber) {
-            // CALL LOSS FUNCTION
-            loss();
-        };
-/*
+
     // ONCLICK JEWEL1
     $("#jewel1").on("click", function() {
         // SCORE += JEWELONE
@@ -182,6 +167,5 @@ $(document).ready(function() {
         };
 
     }); // END ONCLICK JEWEL4  
-*/
 
 }); // END THE READY START FUNCITON
