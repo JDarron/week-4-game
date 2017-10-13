@@ -102,17 +102,17 @@ $(document).ready(function() {
             // SCORE .TEXT SCORE 
             $("#score").text(score);
         } else if ($(this).attr("value") === "2") {
-            // SCORE += JEWELONE
+            // SCORE += JEWELTWO
             score += jewelTwo;
             // SCORE .TEXT SCORE 
             $("#score").text(score);
         } else if ($(this).attr("value") === "3") {
-            // SCORE += JEWELONE
+            // SCORE += JEWELTHREE
             score += jewelThree;
             // SCORE .TEXT SCORE 
             $("#score").text(score);
         } else {
-            // SCORE += JEWELONE
+            // SCORE += JEWELFOUR
             score += jewelFour;
             // SCORE .TEXT SCORE 
             $("#score").text(score);
