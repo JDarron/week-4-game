@@ -95,13 +95,29 @@ $(document).ready(function() {
     genJewelValue();
 
     // ======================== ONCLICKS ===========================
+    $(".jewel").on("click", function() {
+        if ($(this).attr("value") === "1") {
+            // SCORE += JEWELONE
+            score += jewelOne;
+            // SCORE .TEXT SCORE 
+            $("#score").text(score);
+        } else if ($(this).attr("value") === "2") {
+            // SCORE += JEWELONE
+            score += jewelTwo;
+            // SCORE .TEXT SCORE 
+            $("#score").text(score);
+        } else if ($(this).attr("value") === "3") {
+            // SCORE += JEWELONE
+            score += jewelThree;
+            // SCORE .TEXT SCORE 
+            $("#score").text(score);
+        } else {
+            // SCORE += JEWELONE
+            score += jewelFour;
+            // SCORE .TEXT SCORE 
+            $("#score").text(score);
+        };
 
-    // ONCLICK JEWEL1
-    $("#jewel1").on("click", function() {
-        // SCORE += JEWELONE
-        score += jewelOne;
-        // SCORE .TEXT SCORE 
-        $("#score").text(score);
         // IF SCORE IS === MAGICNUMBER
         if (score === magicNumber) {
             // CALL WIN FUNCTION
@@ -111,61 +127,6 @@ $(document).ready(function() {
             // CALL LOSS FUNCTION
             loss();
         };
-
-    }); // END ONCLICK JEWEL1 
-
-    // ONCLICK JEWEL2
-    $("#jewel2").on("click", function() {
-        // SCORE += JEWELONE
-        score += jewelTwo;
-        // SCORE .TEXT SCORE 
-        $("#score").text(score);
-        // IF SCORE IS === MAGICNUMBER
-        if (score === magicNumber) {
-            // CALL WIN FUNCTION
-            win();
-            // ELSE IF SCORE > MAGICNUMBER
-        } else if (score > magicNumber) {
-            // CALL LOSS FUNCTION
-            loss();
-        };
-
-    }); // END ONCLICK JEWEL2
-
-    // ONCLICK JEWEL3
-    $("#jewel3").on("click", function() {
-        // SCORE += JEWELONE
-        score += jewelThree;
-        // SCORE .TEXT SCORE 
-        $("#score").text(score);
-        // IF SCORE IS === MAGICNUMBER
-        if (score === magicNumber) {
-            // CALL WIN FUNCTION
-            win();
-            // ELSE IF SCORE > MAGICNUMBER
-        } else if (score > magicNumber) {
-            // CALL LOSS FUNCTION
-            loss();
-        };
-
-    }); // END ONCLICK JEWEL3
-
-    // ONCLICK JEWEL4
-    $("#jewel4").on("click", function() {
-        // SCORE += JEWELONE
-        score += jewelFour;
-        // SCORE .TEXT SCORE 
-        $("#score").text(score);
-        // IF SCORE IS === MAGICNUMBER
-        if (score === magicNumber) {
-            // CALL WIN FUNCTION
-            win();
-            // ELSE IF SCORE > MAGICNUMBER
-        } else if (score > magicNumber) {
-            // CALL LOSS FUNCTION
-            loss();
-        };
-
-    }); // END ONCLICK JEWEL4  
+    }); // END JEWEL ONCLICK 
 
 }); // END THE READY START FUNCITON
