@@ -56,11 +56,8 @@ $(document).ready(function() {
         jewelFour = Math.floor((Math.random() * 6) + 1);
         // ASIGN THE ID JEWELFOUR WITH THE VALUE OF JEWELFOUR
         $("#jewelFour").attr("value", jewelFour);
-
-
-
         // CHECK VARIABLES
-        // console.log(jewelOne, jewelTwo, jewelThree, jewelFour);
+        console.log(jewelOne, jewelTwo, jewelThree, jewelFour);
     }; // END GENJEWELVALUE
 
     // FUNCTION WIN
@@ -106,7 +103,9 @@ $(document).ready(function() {
     genJewelValue();
 
     // ======================== ONCLICKS ===========================
+    
     $(".jewel").on("click", function() {
+    	// ADD SCORE WITH THE VALUE OF JEWEL CLICKED
         score += Number($(this).attr("value"));
         // SCORE .TEXT SCORE 
         $("#score").text(score);
