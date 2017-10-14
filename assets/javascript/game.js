@@ -45,11 +45,22 @@ $(document).ready(function() {
     function genJewelValue() {
         // ASSIGN EACH JEWEL A RANDOMLY GENERATED NUMBER BETWEEN 1 & 9
         jewelOne = Math.floor((Math.random() * 6) + 1);
+        // ASIGN THE ID JEWELONE WITH THE VALUE OF JEWELONE
+        $("#jewelOne").attr("value", jewelOne);
         jewelTwo = Math.floor((Math.random() * 6) + 1);
+        // ASIGN THE ID JEWELTWO WITH THE VALUE OF JEWELTWO
+        $("#jewelTwo").attr("value", jewelTwo);
         jewelThree = Math.floor((Math.random() * 6) + 1);
+        // ASIGN THE ID JEWELTHREE WITH THE VALUE OF JEWELTHREE
+        $("#jewelThree").attr("value", jewelThree);
         jewelFour = Math.floor((Math.random() * 6) + 1);
+        // ASIGN THE ID JEWELFOUR WITH THE VALUE OF JEWELFOUR
+        $("#jewelFour").attr("value", jewelFour);
+
+
+
         // CHECK VARIABLES
-        console.log(jewelOne, jewelTwo, jewelThree, jewelFour);
+        // console.log(jewelOne, jewelTwo, jewelThree, jewelFour);
     }; // END GENJEWELVALUE
 
     // FUNCTION WIN
@@ -96,28 +107,9 @@ $(document).ready(function() {
 
     // ======================== ONCLICKS ===========================
     $(".jewel").on("click", function() {
-        if ($(this).attr("value") === "1") {
-            // SCORE += JEWELONE
-            score += jewelOne;
-            // SCORE .TEXT SCORE 
-            $("#score").text(score);
-        } else if ($(this).attr("value") === "2") {
-            // SCORE += JEWELTWO
-            score += jewelTwo;
-            // SCORE .TEXT SCORE 
-            $("#score").text(score);
-        } else if ($(this).attr("value") === "3") {
-            // SCORE += JEWELTHREE
-            score += jewelThree;
-            // SCORE .TEXT SCORE 
-            $("#score").text(score);
-        } else {
-            // SCORE += JEWELFOUR
-            score += jewelFour;
-            // SCORE .TEXT SCORE 
-            $("#score").text(score);
-        };
-
+        score += Number($(this).attr("value"));
+        // SCORE .TEXT SCORE 
+        $("#score").text(score);
         // IF SCORE IS === MAGICNUMBER
         if (score === magicNumber) {
             // CALL WIN FUNCTION
@@ -126,7 +118,8 @@ $(document).ready(function() {
         } else if (score > magicNumber) {
             // CALL LOSS FUNCTION
             loss();
-        };
+        }; // END IF 
+
     }); // END JEWEL ONCLICK 
 
 }); // END THE READY START FUNCITON
