@@ -1,3 +1,7 @@
+.jumbotron-container {
+	background-image: url("../images/backgrounds/crystalBackground.jpg");
+}
+
 .Crystal-Margin {
 	margin: 0px 30px 0px 30px;
 }

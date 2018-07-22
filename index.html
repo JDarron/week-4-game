@@ -1,150 +1,148 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Week 4 Game</title>
-	<link 
-		rel="stylesheet" 
-		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>
+		Crystal Collector
+	</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script 
-		src="https://code.jquery.com/jquery-3.2.1.js"
-	  	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-	  	crossorigin="anonymous"></script>
+	<link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
-<!-- ================ START JUMBOTRON ============== -->
-<div class="row">
-	<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-		<div class="jumbotron">
-			<h1>
-		  		Crystal Collector!
-			</h1>
-		</div>
-	</div>
-</div>
-<!-- ================ END JUMBOTRON ============== -->
-<!-- ================ START CONTENT ============== -->
-<div class="container">
-<!-- ROW 1 -->
-<div class="row">
-	<div class="col-md12 col-sm-12 col-xs-12 text-center">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Instructions
-				</h3>
-			</div>
-	  		<div class="panel-body text-left">
-				<ul>
-					<li>
-						You will be given a random number at the start of the game.
-					</li>
-					<li>
-						There are four crystals below. By clicking a crystal you will add a specific amount of points to your total score.
-					</li>
-					<li>
-						You win by matching your score with the Magic Number. You loose if its not exact.
-					</li>
-					<li>
-						The value can only be found when clicked on.
-					</li>
-					<li>
-						Each time the game starts the crystal values change.
-					</li>
-				</ul>
-	  		</div>
-		</div>
-	</div>
-</div>
-<!-- ROW 1 END -->
-<!-- ROW 2 -->
-<div class="row">
-	<div class="col-md-6 col-sm-6 col-xs-12 text-center">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Magic Number 
-				</h3>
-			</div>
-			<div class="panel-body" id="magic-number">
-		    	
+	<!-- ================ JUMBOTRON ============== -->
+
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+			<div class="jumbotron">
+				<h1>
+					Crystal Collector!
+				</h1>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-3 col-sm-3 col-xs-6 text-center">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Wins 
-				</h3>
-			</div>
-			<div class="panel-body" id="wins">
-		    	
-			</div>
-		</div>
-	</div>
-	<div class="col-md-3 col-sm-3 col-xs-6 text-center">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Losses
-				</h3>
-			</div>
-			<div class="panel-body" id="losses">
-		    	
-			</div>
-		</div>
-	</div>
-</div>
-<!-- ROW 3 -->
-<div class="row">
-	<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Score
-				</h3>
-			</div>
-			<div class="panel-body" id="score">
-				
-			</div>
-		</div>
-	</div>
-</div>
-<!-- ROW 3 END -->
-<!-- ROW 4 -->
-<div class="row">
-	<div class="col-md-12 col-sm-12 col-xs-12 text-center">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">
-					Crystals
-				</h3>
-			</div>
-			<div class="panel-body">
-				<div class="btn-group" role="group" aria-label="...">
-					  <button type="button" class="btn btn-default Crystal-Margin jewel" id="jewelOne" value=" ">
-					  	<img src="assets/images/blue.png" alt="" height="60" width="60">
-					  </button>
-					  <button type="button" class="btn btn-default Crystal-Margin jewel" id="jewelTwo" value=" ">
-					  	<img src="assets/images/yellow.png" alt="" height="60" width="60">
-					  </button>
-					  <button type="button" class="btn btn-default Crystal-Margin jewel" id="jewelThree" value=" ">
-					  	<img src="assets/images/red.png" alt="" height="60" width="60">
-					  </button>
-					  <button type="button" class="btn btn-default Crystal-Margin jewel" id="jewelFour" value=" ">
-					  	<img src="assets/images/green.png" alt="" height="60" width="60">
-					  </button>
+
+	<!-- ================ CONTENT ============== -->
+	<div class="container">
+		<!-- ROW 1 -->
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							Instructions
+						</h3>
+					</div>
+					<div class="panel-body text-left">
+						<ul>
+							<li>
+								You will be given a random number at the start of the game.
+							</li>
+							<li>
+								There are four crystals below. By clicking a crystal you will add a specific amount of points to your total score.
+							</li>
+							<li>
+								You win by matching your score with the Magic Number. You loose if its not exact.
+							</li>
+							<li>
+								The value can only be found when clicked on.
+							</li>
+							<li>
+								Each time the game starts the crystal values change.
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
+		<!-- ROW 2 -->
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12 text-center">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							Magic Number
+						</h3>
+					</div>
+					<div class="panel-body" id="magic-number">
+
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6 text-center">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							Wins
+						</h3>
+					</div>
+					<div class="panel-body" id="wins">
+
+					</div>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-3 col-xs-6 text-center">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							Losses
+						</h3>
+					</div>
+					<div class="panel-body" id="losses">
+						<!-- LOSSES GO HERE -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ROW 3 -->
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							Score
+						</h3>
+					</div>
+					<div class="panel-body" id="score">
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ROW 4 -->
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12 text-center">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">
+							Crystals
+						</h3>
+					</div>
+					<div class="panel-body">
+						<div class="btn-group" role="group" aria-label="...">
+							<button type="button" class="btn btn-default Crystal-Margin jewel" id="jewelOne" value=" ">
+								<img src="assets/images/blue.png" alt="" height="60" width="60">
+							</button>
+							<button type="button" class="btn btn-default Crystal-Margin jewel" id="jewelTwo" value=" ">
+								<img src="assets/images/yellow.png" alt="" height="60" width="60">
+							</button>
+							<button type="button" class="btn btn-default Crystal-Margin jewel" id="jewelThree" value=" ">
+								<img src="assets/images/red.png" alt="" height="60" width="60">
+							</button>
+							<button type="button" class="btn btn-default Crystal-Margin jewel" id="jewelFour" value=" ">
+								<img src="assets/images/green.png" alt="" height="60" width="60">
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ================ SCRIPTS ============== -->
+		<script src="assets/javascript/game.js"></script>
 	</div>
-</div>
-<!-- ROW 4 END -->
-<!-- ================ END CONTENT ============== -->
-<!-- ================ SCRIPTS ============== -->
-<script src="assets/javascript/game.js"></script>
-</div>
 </body>
+
 </html>
