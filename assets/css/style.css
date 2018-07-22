@@ -1,5 +1,27 @@
+body {
+	font-family: "Roboto";
+	font-weight: 300;
+	font-size: 17px;
+	background-image: url("../images//backgrounds//asanoha.png");
+}
+
+.panel {
+	border: none;
+}
+
+.panel-heading {
+	background-color: #595959 !important; 
+	color: #FFFFFF !important;
+}
+
 .jumbotron-container {
 	background-image: url("../images/backgrounds/crystalBackground.jpg");
+	color: #FFFFFF;
+	font-family: "Lobster";
+}
+
+h3 {
+	font-weight: 400;
 }
 
 .Crystal-Margin {
